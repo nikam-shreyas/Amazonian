@@ -90,7 +90,7 @@ function RegisterScreen(props) {
               to={redirect === "/" ? "signin" : "signin?redirect=" + redirect}
               className="button secondary text-center"
             >
-              Sign in your Amazonian account
+              Sign in your Amazona account
             </Link>
           </li>
         </ul>
