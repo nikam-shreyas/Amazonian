@@ -19,9 +19,9 @@ button {
 .grid-container {
   display: grid;
   grid-template-areas:
-    'header'
-    'main'
-    'footer';
+    "header"
+    "main"
+    "footer";
   grid-template-columns: 1fr;
   grid-template-rows: 5rem 1fr 5rem;
   height: 100%;
@@ -79,29 +79,44 @@ a:hover {
   flex: 0 1 34rem;
   margin: 1rem;
   height: 50rem;
-  border-bottom: 0.1rem #c0c0c0 solid;
 }
 .product {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   height: 100%;
+  border-radius: 5px;
+  padding: 5px;
+  transition: all 0.2s ease-in-out;
+}
+.product:hover {
+  border: 2px solid gray;
+  transform: scale(1.02);
 }
 .product-name {
   font-size: 2rem;
   font-weight: bold;
 }
 .product-brand {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
   color: #808080;
 }
 .product-price {
   font-size: 2rem;
   font-weight: bold;
+  margin-top: 2rem;
+  float: right;
 }
 .product-image {
   max-width: 34rem;
   max-height: 34rem;
+  min-height: 30rem;
+  margin-top: 30px;
+}
+.product-description {
+  font-size: 12px;
+  color: gray;
+  align-content: justify;
 }
 .product-rating {
   margin-bottom: 1rem;
@@ -148,16 +163,21 @@ a > .rating > span:last-child {
   transition: all 0.5s;
   transform: translateX(-30rem);
   width: 30rem;
-  background-color: #f0f0f0;
+  background-color: #203040;
+  color: white;
   height: 100%;
 }
 .sidebar.open {
   transform: translateX(0);
+  color: white;
 }
-
+.error {
+  color: red;
+}
 .sidebar-close-button {
-  border-radius: 50%;
+  border-radius: 10%;
   border: 0.1rem #000000 solid;
+  background-color: rgb(255, 208, 0);
   width: 3rem;
   height: 3rem;
   padding: 0.5rem;
@@ -178,7 +198,7 @@ a > .rating > span:last-child {
   padding: 1rem;
 }
 .details-image {
-  flex: 2 1 60rem;
+  flex: 2 1 30rem;
 }
 .details-image img {
   max-width: 60rem;
@@ -202,6 +222,8 @@ a > .rating > span:last-child {
 }
 .back-to-result {
   padding: 1rem;
+  color: rgb(255, 187, 0);
+  font-weight: bold;
 }
 .details-action {
   border: 0.1rem #808080 solid;
@@ -293,7 +315,7 @@ a > .rating > span:last-child {
 .form-container {
   display: flex;
   flex-direction: column;
-  width: 32rem;
+  width: 36rem;
   padding: 2rem;
   border: 0.1rem #c0c0c0 solid;
   border-radius: 0.5rem;
@@ -458,8 +480,11 @@ tbody > tr:nth-child(odd) {
 .categories a {
   display: flex;
   padding: 1rem;
+
+  color: white;
 }
 
 .categories a:hover {
-  background-color: #c0c0c0;
+  background-color: #ffb223;
+  color: black;
 }

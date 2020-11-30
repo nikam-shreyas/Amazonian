@@ -1,29 +1,29 @@
-import React from 'react';
-import { BrowserRouter, Route, Link } from 'react-router-dom';
-import './App.css';
-import HomeScreen from './screens/HomeScreen';
-import ProductScreen from './screens/ProductScreen';
-import CartScreen from './screens/CartScreen';
-import SigninScreen from './screens/SigninScreen';
-import { useSelector } from 'react-redux';
-import RegisterScreen from './screens/RegisterScreen';
-import ProductsScreen from './screens/ProductsScreen';
-import ShippingScreen from './screens/ShippingScreen';
-import PaymentScreen from './screens/PaymentScreen';
-import PlaceOrderScreen from './screens/PlaceOrderScreen';
-import OrderScreen from './screens/OrderScreen';
-import ProfileScreen from './screens/ProfileScreen';
-import OrdersScreen from './screens/OrdersScreen';
+import React from "react";
+import { BrowserRouter, Route, Link } from "react-router-dom";
+import "./App.css";
+import HomeScreen from "./screens/HomeScreen";
+import ProductScreen from "./screens/ProductScreen";
+import CartScreen from "./screens/CartScreen";
+import SigninScreen from "./screens/SigninScreen";
+import { useSelector } from "react-redux";
+import RegisterScreen from "./screens/RegisterScreen";
+import ProductsScreen from "./screens/ProductsScreen";
+import ShippingScreen from "./screens/ShippingScreen";
+import PaymentScreen from "./screens/PaymentScreen";
+import PlaceOrderScreen from "./screens/PlaceOrderScreen";
+import OrderScreen from "./screens/OrderScreen";
+import ProfileScreen from "./screens/ProfileScreen";
+import OrdersScreen from "./screens/OrdersScreen";
 
 function App() {
   const userSignin = useSelector((state) => state.userSignin);
   const { userInfo } = userSignin;
 
   const openMenu = () => {
-    document.querySelector('.sidebar').classList.add('open');
+    document.querySelector(".sidebar").classList.add("open");
   };
   const closeMenu = () => {
-    document.querySelector('.sidebar').classList.remove('open');
+    document.querySelector(".sidebar").classList.remove("open");
   };
   return (
     <BrowserRouter>
@@ -31,7 +31,7 @@ function App() {
         <header className="header">
           <div className="brand">
             <button onClick={openMenu}>&#9776;</button>
-            <Link to="/">amazona</Link>
+            <Link to="/">Amazonian</Link>
           </div>
           <div className="header-links">
             <a href="cart.html">Cart</a>
@@ -60,11 +60,11 @@ function App() {
           </button>
           <ul className="categories">
             <li>
-              <Link to="/category/Pants">Pants</Link>
+              <Link to="/category/Pants">Shop for Pants</Link>
             </li>
 
             <li>
-              <Link to="/category/Shirts">Shirts</Link>
+              <Link to="/category/Shirts">Shop for Shirts</Link>
             </li>
           </ul>
         </aside>
@@ -85,7 +85,7 @@ function App() {
             <Route path="/" exact={true} component={HomeScreen} />
           </div>
         </main>
-        <footer className="footer">All right reserved.</footer>
+        <footer className="footer">Happy Shopping!</footer>
       </div>
     </BrowserRouter>
   );
