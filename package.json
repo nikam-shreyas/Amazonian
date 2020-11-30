@@ -26,10 +26,6 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react-hooks": "^2.5.1",
     "nodemon": "^2.0.2",
-    "disableHostCheck":"true"
-  },
-  "devServer": {
-    "disableHostCheck": true
   },
   "scripts": {
     "start": "nodemon --watch backend --exec babel-node backend/server.js",
