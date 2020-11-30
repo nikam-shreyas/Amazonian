@@ -28,6 +28,8 @@
     "nodemon": "^2.0.2"
   },
   "scripts": {
+
+  "heroku-prebuild": "npm install --dev",
     "start": "nodemon --watch backend --exec babel-node backend/server.js",
     "build": "set NODE_ENV=production && webpack-dev-server --host 127.0.0.1 --inline --history-api-fallback --content-base . ",
     "heroku-postbuild-x": "npm run build && cd frontend && npm install && npm run build"
